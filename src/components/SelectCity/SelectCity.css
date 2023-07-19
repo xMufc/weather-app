@@ -1,0 +1,36 @@
+.city {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .city label {
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  
+  .city select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 200px;
+  }
+  @media (max-width: 600px) {
+    .city {
+      width: 90%;
+      margin-bottom: 16px;
+      margin: 0 5px;
+    }
+  
+    .city label {
+      display: block;
+      margin-bottom: 8px;
+    }
+  
+    .city select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }

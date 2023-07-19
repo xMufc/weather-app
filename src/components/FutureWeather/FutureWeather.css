@@ -1,0 +1,25 @@
+.daily, .rightDaily {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items:center;
+}
+.daily{
+  width: 100%;
+  max-width: 350px;
+  border-top: 1px solid #e5e5e5;
+}
+.rightDaily img, .dailyDay{
+  padding-right: 20px;
+}
+.dailyNight{
+  color: grey;
+  padding-right: none;
+}
+@media (max-width: 600px) {
+  .act{
+    width: 100%;
+    max-width: 500px;
+  }
+  
+}
