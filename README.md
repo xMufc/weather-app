@@ -1,6 +1,6 @@
 ## Aplikacja (https://xmufc.github.io/weather-app)
 
-Aplikacja pozwala wyświetlać pogodę w największych miastach Polski. Aplikacja korzysta z zewnętrznego API do pobierania danych pogodowych
+Aplikacja pozwala wyświetlać pogodę w największych miastach Polski. Aplikacja korzysta z zewnętrznego API (https://weatherbit.io/) do pobierania danych pogodowych. 
 Opis poszczególnych komponentów:
 
 1. ### 'SelectCity'
