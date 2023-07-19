@@ -1,4 +1,4 @@
-## Aplikacja
+## Aplikacja (https://xmufc.github.io/weather-app)
 
 Aplikacja pozwala wyświetlać pogodę w największych miastach Polski. Aplikacja korzysta z zewnętrznego API do pobierania danych pogodowych
 Opis poszczególnych komponentów:
