@@ -18,7 +18,7 @@ Opis poszczególnych komponentów:
 
 1. Sklonuj repozytorium z projektem
 
-    	`git clone https://github.com/odolczykd/React-Contact-Book.git`
+    	`git clone https://github.com/xMufc/weather-app.git`
 
 2. Przejdź do katalogu, w którym znajduje się projekt i zainstaluj wymagane pakiety
 
