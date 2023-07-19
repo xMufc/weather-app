@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { WEATHER_API_URL, WEATHER_API_KEY, FORECAST_API_URL } from "../../key";
 import {ActualWeather} from "../ActualWeather/ActualWeather"
 import Chart from '../Chart/Chart';
 import SelectCity from '../SelectCity/SelectCity';
@@ -19,17 +18,17 @@ function Weather() {
         const cityData = Cords.find((city) => city.name === selectedCity);
         if (cityData) {
           const { lat, lon } = cityData;
-  
+          console.log(process.env.REACT_APP_WEATHER_API_KEY);
           // Pobieranie danych pogodowych dla aktualnej pogody
           const currentWeatherResponse = await fetch(
-            `${WEATHER_API_URL}/current?lat=${lat}&lon=${lon}&key=${WEATHER_API_KEY}&include=minutely`
+            `${process.env.REACT_APP_WEATHER_API_URL}/current?lat=${lat}&lon=${lon}&key=${process.env.REACT_APP_WEATHER_API_KEY}&include=minutely`
           );
           const currentWeatherData = await currentWeatherResponse.json();
           setTemperature(currentWeatherData);
   
           // Pobieranie danych pogodowych dla prognozy godzinowej
           const hourlyForecastResponse = await fetch(
-            `${FORECAST_API_URL}/forecast/hourly?lat=${lat}&lon=${lon}&key=${WEATHER_API_KEY}`
+            `${process.env.REACT_APP_WEATHER_API_URL}/forecast/hourly?lat=${lat}&lon=${lon}&key=${process.env.REACT_APP_WEATHER_API_KEY}`
           );
           const hourlyForecastData = await hourlyForecastResponse.json();
           const hourlyTemperatures = hourlyForecastData.data.map((hour) => Math.round(hour.temp) * 8);
@@ -37,7 +36,7 @@ function Weather() {
   
           // Pobieranie danych pogodowych dla prognozy 5-dniowej
           const dailyForecastResponse = await fetch(
-            `${FORECAST_API_URL}/forecast/daily?lat=${lat}&lon=${lon}&days=5&key=${WEATHER_API_KEY}`
+            `${process.env.REACT_APP_WEATHER_API_URL}/forecast/daily?lat=${lat}&lon=${lon}&days=5&key=${process.env.REACT_APP_WEATHER_API_KEY}`
           );
           const dailyForecastData = await dailyForecastResponse.json();
           setDailyTemperatures(dailyForecastData);
